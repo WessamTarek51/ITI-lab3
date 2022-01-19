@@ -7,6 +7,7 @@ const {logRequest} = require('./generalHelpers')
 const userRouter = require('./routers/usersRouter')
 
 app.use(bodyParser.json())
+
 app.use('/users',userRouter)
 app.use(logRequest)
 app.use((err,req,res,next)=>{
